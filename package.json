@@ -1,6 +1,6 @@
 {
-  "name": "dbhub",
-  "version": "0.2.3",
+  "name": "ezdbhub", 
+  "version": "0.2.8",
   "description": "Universal Database MCP Server",
   "main": "dist/index.js",
   "type": "module",
@@ -16,10 +16,33 @@
     "build": "tsup",
     "start": "node dist/index.js",
     "dev": "NODE_ENV=development tsx src/index.ts",
-    "crossdev": "cross-env NODE_ENV=development tsx src/index.ts"
+    "crossdev": "cross-env NODE_ENV=development tsx src/index.ts",
+    "prepublishOnly": "npm run build"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "database",
+    "mcp",
+    "mysql",
+    "sqlite",
+    "postgresql",
+    "mssql",
+    "database-tools"
+  ],
+  "author": {
+    "name": "EzrealBBB"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bkf777/dbhub.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bkf777/dbhub/issues"
+  },
+  "homepage": "https://github.com/bkf777/dbhub#readme",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.6.1",
